@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>TutorBot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="hero">
+
+    <h1>🤖 TutorBot</h1>
+
+    <h2>AI Powered Learning Assistant</h2>
+
+    <p>
+        Ask programming questions and get
+        instant AI-powered answers.
+    </p>
+
+    <a href="{{ url_for('chat') }}">
+        <button>🚀 Start Chat</button>
+    </a>
+
+    <div class="features">
+
+        <p>✔ Instant Answers</p>
+
+        <p>✔ AI Powered</p>
+
+        <p>✔ Works Offline</p>
+
+        <p>✔ Easy to Use</p>
+
+    </div>
+
+    <footer>
+
+        Powered by Flask • Ollama • Llama 3.2
+
+    </footer>
+
+</div>
+
+</body>
+
+</html>
