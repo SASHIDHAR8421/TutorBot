@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>TutorBot Chat</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        🤖 TutorBot
+    </div>
+
+    <div class="chat-box">
+
+        <div class="bot-message">
+            Hello! Ask me anything.
+        </div>
+
+        {% if question %}
+        <div class="user-message">
+            <b>You:</b><br>
+            {{ question }}
+        </div>
+        {% endif %}
+
+        {% if answer %}
+        <div class="bot-message">
+            <b>TutorBot:</b><br>
+            {{ answer }}
+        </div>
+        {% endif %}
+
+    </div>
+
+    <form action="/chat" method="POST" class="chat-input">
+
+        <input
+            type="text"
+            name="question"
+            placeholder="Ask your question..."
+            required
+        >
+
+        <button type="submit">
+            Send
+        </button>
+
+    </form>
+
+    <a href="/">
+        ← Back
+    </a>
+
+</div>
+
+</body>
+
+</html>
